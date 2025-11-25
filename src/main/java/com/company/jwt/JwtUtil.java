@@ -44,6 +44,7 @@ public class JwtUtil {
     public String generateAccessToken(UserDto user) {
         Map<String, Object> claims = new HashMap<>();
         claims.put("role", user.getUserRole());
+        claims.put("id", user.getId());
         String accessToken = createToken(user.getEmail(), claims, accessExpirationMs);
         redisService.saveAccessToken(accessToken, user.getEmail(), accessExpirationMs);
 
