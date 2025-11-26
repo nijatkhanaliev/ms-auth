@@ -17,7 +17,7 @@ POST http://localhost:8082/api/v1/auth/login
 Content-Type: application/json
 
 {
-  "email": "nicat@example.com",
+  "email": "nicatsa@example.com",
   "password": "Nicat123."
 }
 
@@ -55,19 +55,19 @@ POST http://localhost:8085/api/v1/products
 Content-Type: application/json
 
 {
-  "name": "iPhone 16",
+  "name": "iPhone 17",
   "description": "Apple iPhone",
-  "price": 1756.99,
+  "price": 2756.99,
   "stock": 8
 }
 
 ###
 #getProductById   (ms inventory)
-GET http://localhost:8085/api/v1/products/1
+GET http://localhost:8085/api/v1/products/2
 
 ###
 #updateStock      (ms inventory)
-PUT http://localhost:8085/api/v1/products/1/stock?quantity=4
+PUT http://localhost:8085/api/v1/products/2/stock?quantity=5
 
 
 ###
@@ -91,7 +91,7 @@ current-user-id: 1
 
 ###
 # getOrderById  (ms order)
-GET http://localhost:8086/api/v1/orders/6
+GET http://localhost:8086/api/v1/orders/11
 current-user-id: 1
 
 
